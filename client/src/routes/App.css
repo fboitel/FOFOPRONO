@@ -1,0 +1,34 @@
+.accueil
+{
+    width:100%;
+    margin-top: 55px;
+}
+
+
+
+.accueil div.div-matchs {
+    width: 40%;
+    float:left;
+    margin-left: 0%;
+}
+
+.accueil div.div-standing {
+    width: 40%;
+    background-color: rgb(206, 207, 198);
+    margin-left:60% ;
+    float:left;
+}
+
+.vertical { 
+    border-left: 1px solid #9e9fa1; 
+    height: 180px; 
+    display: inline-block;
+    margin-top: 50px;
+    } 
+body {
+    background-color: rgb(206, 207, 198);
+}
+
+.disp-gen {
+    overflow: hidden;
+}

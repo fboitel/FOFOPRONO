@@ -1,0 +1,89 @@
+.App-content {
+    background-color: rgb(206, 207, 198);
+    /* max-width: 100%; */
+    /* flex-direction: line; */
+    /* align-items: center; */
+    /* justify-content: top; */
+    /* font-size: calc(10px + 2vmin); */
+    color: #282c34;
+  }
+
+  .AnimatedForm__field {
+    position: relative;
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .textInput {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    outline: 0;
+    width: 65%;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: all .2s ease-in-out;
+    height: 1px;
+    padding: 12px 12px 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    background-color: #fcfcfb;
+    font-family: Noto Sans,sans-serif;
+  }
+
+
+  button, input {
+    overflow: visible;
+  }
+  .h3-title {
+    height: 13px;
+  }
+
+  .div-enter {
+    height: 13px;
+  }
+  
+  .AnimatedForm__submitButton:hover {
+    background: #595e68;
+  }
+  .AnimatedForm__submitButton.m-full-width {
+    width: 80%;
+  }
+  .AnimatedForm__submitButton, .AnimatedForm__submitButton::before {
+    transition: color .01s ease-in,text-indent .25s ease-in,opacity .25s ease-in;
+  }
+  .AnimatedForm__submitButton {
+    overflow: inherit;
+    position: relative;
+    font-family: IBMPlexSans,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 32px;
+    color: #fff;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    background: #282c34;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: unset;
+    min-height: 35px;
+    max-width: 392px;
+    width: auto;
+    /* min-width: 155px; */
+    padding: 5px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .div-response {
+    margin-top: 10px;
+    color: rgb(100, 0, 52);
+    text-justify: center;
+  }
