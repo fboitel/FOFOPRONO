@@ -30,7 +30,7 @@
     padding: 12px 12px 10px;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 4px;
-    background-color: #fcfcfb;
+    background-color: rgb(206, 207, 198);
     font-family: Noto Sans,sans-serif;
   }
 
@@ -63,7 +63,7 @@
     font-weight: 600;
     letter-spacing: .5px;
     line-height: 32px;
-    color: #fff;
+    color: rgb(206, 207, 198);
     display: inline-block;
     border: none;
     border-radius: 4px;

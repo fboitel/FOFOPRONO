@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import "./Standing.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Header"
+import { sortPlayers } from "../utils/standing";
 
 
 class Standing extends Component {
 
-    monArr = {score: [3, 3, 4, 5, 6, 7]};
+    i = 1;
 
     constructor(props) {
         super(props);
-        this.state = { apiResponse: {score:[]} };
+        this.state = {apiResponse: []};
     }
 
     callAPI() {
@@ -27,29 +28,51 @@ class Standing extends Component {
     }
 
     render() {
+        sortPlayers(this.state.apiResponse);
         if (this.props.apiResponse != "CONNECTE(E)"){
             return (
-                <div><center>
-                    <h1>Connexion requise</h1>
-                    <a href="/login"><button className="AnimatedForm__submitButton m-full-width">Connexion</button></a>
-                </center></div>
+                <div>
+                    <div className>
+                        <Header token={JSON.stringify(this.props)}/>
+                    </div>
+                    <div className="required-con"><center>
+                        <h1>Connexion requise</h1>
+                        <a href="/login"><button className="AnimatedForm__submitButton m-full-width">Connexion</button></a>
+                    </center></div>
+                </div>
             );
         }
         return (
 
-            <body>
+            <div>
                 <div className>
                     <Header token={JSON.stringify(this.props)}/>
                 </div>
-                <div className="App-content">
-                    <p> CLASSEMENT </p>
-                    {/* <p className="App-intro">{this.state.apiResponse}</p> */}
-                    <p></p>
-                    {this.state.apiResponse.score.map((item) => (
-                    <p>{item}</p>
-                ))}
+                <div className="main">
+                    <p className="titile"> CLASSEMENT </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td className="td-corner"></td>
+                                <td className="td-player">JOUEUR</td>
+
+                                <td className="td-score">PTS</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.apiResponse.map((item) => (
+                                <tr>
+                                    <td className="td-number">{this.i++}.</td>
+                                    <td className="td-player">{item.pseudo}</td>
+
+                                    <td className="td-score">{item.points}</td>
+                                </tr>
+                                ))}
+                           
+                        </tbody>
+                    </table>
                 </div>
-            </body>
+            </div>
             
         );
     }

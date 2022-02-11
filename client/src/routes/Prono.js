@@ -26,10 +26,15 @@ class Prono extends Component {
 
         if (this.props.apiResponse != "CONNECTE(E)"){
             return (
-                <div><center>
-                    <h1>Connexion requise</h1>
-                    <a href="/login"><button className="AnimatedForm__submitButton m-full-width">Connexion</button></a>
-                </center></div>
+                <div>
+                    <div className>
+                        <Header token={JSON.stringify(this.props)}/>
+                    </div>
+                    <div className="required-con"><center>
+                        <h1>Connexion requise</h1>
+                        <a href="/login"><button className="AnimatedForm__submitButton m-full-width">Connexion</button></a>
+                    </center></div>
+                </div>
             );
         }
 

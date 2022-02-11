@@ -24,3 +24,63 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  .required-con {
+    margin-top: 100px;
+  }
+
+
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  thead {
+    background-color: #282c34;
+    color: rgb(206, 207, 198);
+  }
+
+  td {
+      border: 1px solid #333;
+      text-align: left;
+  }
+
+  .td-score {
+    text-align: right;
+    padding-right: 6px;
+  }
+
+  .td-player{
+    width: 500px;
+    padding-left: 6px;
+
+  }
+
+  .td-number {
+    padding-left: 6px;
+    padding-right: 10px;
+
+  }
+
+  .td-corner {
+    background-color: rgb(206, 207, 198);
+    border: none;
+  }
+  
+.titile{
+  margin-top: 0;
+  margin-bottom: 10px;
+ font-size: 50px;
+ font-weight:900;
+ letter-spacing: -5px;
+}
+
+  .main {
+    margin-top: 60px;
+    text-align: center;
+   
+    font-family: Noto Sans,sans-serif;
+
+  }
+  
