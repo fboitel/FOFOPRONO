@@ -1,2 +1,2 @@
 # FOFOPRONO
-Web application for pronostic on 2022 world cup
+Application web permettant de réaliser des pronostiques sur la coupe du monde 2022
