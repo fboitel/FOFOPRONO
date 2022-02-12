@@ -1,24 +1,35 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "./App.css"
 import Match from "../components/Match";
+import MiniStanding from "../components/MiniStanding";
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { apiResponse: [] };
+        this.state = { 
+            apiMatchResponse: [],
+            apiStandingResponse: [] 
+        };
     }
 
-    callAPI() {
+    callMatchAPI() {
         fetch("http://localhost:9000/match")
             .then(res => res.json())
-            .then(res => this.setState({ apiResponse: res }))
+            .then(res => this.setState({ apiMatchResponse: res }))
+            .catch(err => err);
+    }
+
+    callStandingAPI() {
+        fetch("http://localhost:9000/standing")
+            .then(res => res.json())
+            .then(res => this.setState({ apiStandingResponse: res }))
             .catch(err => err);
     }
 
     componentDidMount() {
-        this.callAPI();
+        this.callMatchAPI();
+        this.callStandingAPI();
     }
 
 
@@ -28,13 +39,19 @@ class App extends Component {
                 <div>
                     <Header token={JSON.stringify(this.props)}/>
                 </div>
-                <div className="accueil">
-                    <div className="div-matchs">
+                <div id="accueil">
+                    <div id="div-matchs">
+                        <div className="title">MATCHS</div>
                         <div>
-                            {this.state.apiResponse.map((item) => (
+                            {this.state.apiMatchResponse.map((item) => (
                             <div><Match data={item}/></div>
                             ))}
                         </div>
+                    </div>
+                    <span id="trait" className="vertical1"></span>
+                    <div id="div-standing">
+                        <div className="title">CLASSEMENT</div>
+                        <MiniStanding token={JSON.stringify(this.props)} players={this.state.apiStandingResponse}/>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,45 @@
+  .stand-table {
+    margin-top: 0;
+  }
+
+  .stand-head {
+    background-color: #282c34;
+    color: rgb(206, 207, 198);
+  }
+
+
+  .td-score1 {
+    border: 1px solid #333;
+    text-align: right;
+    padding-right: 6px;
+  }
+
+  .td-player1{
+    border: 1px solid #333;
+    text-align: left;
+    width: 200px;
+    padding-left: 6px;
+  }
+
+  .td-number1 {
+    border: 1px solid #333;
+    text-align: left;
+    padding-left: 6px;
+    padding-right: 10px;
+
+  }
+
+  .td-corner1 {
+    text-align: left;
+    background-color: rgb(206, 207, 198);
+    border: none;
+  }
+  
+  .stand-main {
+    margin-top: 0px;
+    text-align: center;
+   
+    font-family: Noto Sans,sans-serif;
+
+  }
+  

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './routes/App';
 import Standing from './routes/Standing';
-import Match from './components/Match';
 import Login from './routes/Login';
 import Prono from './routes/Prono';
+import Rules from './routes/Rules'
 import reportWebVitals from './test/reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {getToken, setToken} from "./utils/token";
@@ -15,6 +15,7 @@ App.defaultProps = getToken();
 Standing.defaultProps = getToken();
 Prono.defaultProps = getToken();
 Login.defaultProps = getToken();
+Rules.defaultProps = getToken();
 
 
 ReactDOM.render(
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route path="/Standing" element={<Standing />}/>
       <Route path="/Login" element={<Login />}/>
       <Route path="/Prono" element={<Prono />}/>
+      <Route path="/Rules" element={<Rules />}/>
     </Routes>
   </Router>,
   

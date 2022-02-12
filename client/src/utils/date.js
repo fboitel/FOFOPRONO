@@ -38,4 +38,13 @@ function normalizeValue(a){
   return a;
 }
 
-export {getFullMonth, normalizeValue};
+function isPassed(date){
+  var actual = new Date(Date.now());
+  if (actual > date){
+    return "yes";
+  }
+  else 
+    return "";
+}
+
+export {getFullMonth, normalizeValue, isPassed };

@@ -1,4 +1,4 @@
-.accueil
+#accueil
 {
     width:100%;
     margin-top: 55px;
@@ -6,29 +6,41 @@
 
 
 
-.accueil div.div-matchs {
+#accueil #div-matchs {
     width: 40%;
     float:left;
-    margin-left: 0%;
+    margin-left: 5%;
 }
 
-.accueil div.div-standing {
+#accueil #trait {
+    float:left;
+    margin-left: 3%;
+}
+
+#accueil #div-standing {
     width: 40%;
     background-color: rgb(206, 207, 198);
-    margin-left:60% ;
+    margin-left:5% ;
     float:left;
+    margin-top: 0;
 }
 
-.vertical { 
+.vertical1 { 
     border-left: 1px solid #9e9fa1; 
-    height: 180px; 
+    height: 380px; 
     display: inline-block;
     margin-top: 50px;
     } 
+
 body {
     background-color: rgb(206, 207, 198);
 }
 
-.disp-gen {
-    overflow: hidden;
-}
+.title{
+    margin-top: 0;
+    margin-bottom: 6px;
+   font-size: 40px;
+   font-weight:900;
+   letter-spacing: -4px;
+   text-align: center;
+  }

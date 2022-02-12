@@ -23,13 +23,6 @@ class Connexion extends Component {
              this.setState(state);
          }.bind(this);
      }
-    clearForm(){
-         this.state = { 
-             apiResponse: "",
-             pseudo:"",
-             mdp:""
-         };
-     }
 
     handleSubmit(event) {
         this.callAPI();

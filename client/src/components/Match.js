@@ -19,9 +19,9 @@ class Match extends Component {
                 H
                 {normalizeValue(date.getMinutes())}</div>
                 <div className="left">{this.props.data.home_team}</div>
-                    <input value={this.props.data.home_score}/>
+                    <input value={this.props.data.home_score} disabled="yes"/>
                 -
-                    <input value={this.props.data.away_score}/>
+                    <input value={this.props.data.away_score} disabled="yes"/>
                 <div className="right">{this.props.data.away_team}</div>
             </div>
         );

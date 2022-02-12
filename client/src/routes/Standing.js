@@ -7,8 +7,6 @@ import { sortPlayers } from "../utils/standing";
 
 class Standing extends Component {
 
-    i = 1;
-
     constructor(props) {
         super(props);
         this.state = {apiResponse: []};
@@ -60,9 +58,9 @@ class Standing extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.apiResponse.map((item) => (
+                            {this.state.apiResponse.map((item, index) => (
                                 <tr>
-                                    <td className="td-number">{this.i++}.</td>
+                                    <td className="td-number">{index+1}.</td>
                                     <td className="td-player">{item.pseudo}</td>
 
                                     <td className="td-score">{item.points}</td>

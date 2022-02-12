@@ -8,7 +8,7 @@ var cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/standing');
-var testAPIRouter = require("./routes/testAPI");
+var pronoRouter = require("./routes/prono");
 var matchRouter = require('./routes/match');
 var signupRouter = require('./routes/signup');
 var loginRouter = require('./routes/login');
@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/standing', usersRouter);
-app.use("/testAPI", testAPIRouter);
+app.use("/prono", pronoRouter);
 app.use('/match', matchRouter);
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
