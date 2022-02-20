@@ -5,7 +5,8 @@ import App from './routes/App';
 import Standing from './routes/Standing';
 import Login from './routes/Login';
 import Prono from './routes/Prono';
-import Rules from './routes/Rules'
+import Rules from './routes/Rules';
+import Admin from './routes/Admin';
 import reportWebVitals from './test/reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {getToken, setToken} from "./utils/token";
@@ -16,6 +17,7 @@ Standing.defaultProps = getToken();
 Prono.defaultProps = getToken();
 Login.defaultProps = getToken();
 Rules.defaultProps = getToken();
+Admin.defaultProps = getToken();
 
 
 ReactDOM.render(
@@ -26,6 +28,7 @@ ReactDOM.render(
       <Route path="/Login" element={<Login />}/>
       <Route path="/Prono" element={<Prono />}/>
       <Route path="/Rules" element={<Rules />}/>
+      <Route path="/Admin123456789" element={<Admin />}/>
     </Routes>
   </Router>,
   

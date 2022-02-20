@@ -7,7 +7,7 @@ var matchModel = require('../models/match');
 //TODO : put async/await instead of setTimout
 async function f(req, res, next) {
     
-    const data = await matchModel.find().select('home_team away_team home_score away_score date _id');
+    const data = await matchModel.find().select('homeTeam awayTeam homeScore awayScore type date _id');
     console.log(data);
     res.json(data);      
 }

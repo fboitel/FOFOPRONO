@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./Prono.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import { getFullMonth, normalizeValue, isPassed } from "../utils/date";
+import { getFullMonth, normalizeValue, isPassed, normalizeDay, normalizeType } from "../utils/date";
 
 class Prono extends Component {
     constructor(props) {
@@ -84,6 +84,7 @@ class Prono extends Component {
             );
         }
 
+        //orderMatch(this.state.apiMatchResponse)
 
         this.state.apiMatchResponse.map((item) => {
             
@@ -107,14 +108,16 @@ class Prono extends Component {
                                 <div>
                                     <div className="Match">
                                         <div className="date">
-                                        {item.date.getDay()}  {getFullMonth(item.date.getMonth())} -  {normalizeValue(item.date.getHours())}
+                                        {normalizeDay(item.date.getDay())} {item.date.getDate()} {getFullMonth(item.date.getMonth())} -  {normalizeValue(item.date.getHours())}
                                         H
-                                        {normalizeValue(item.date.getMinutes())}</div>
-                                        <div className="left">{item.home_team}</div>
+                                        {normalizeValue(item.date.getMinutes())}<br></br>
+                                        {normalizeType(item.type)}
+                                        </div>
+                                        <div className="left">{item.homeTeam}</div>
                                             <input disabled={isPassed(item.date)} value={this.state.homeScore[index]} onChange={this.handleChange('homeScore', index)}/>
                                         -
                                             <input disabled={isPassed(item.date)} value={this.state.awayScore[index]} onChange={this.handleChange('awayScore', index)}/>
-                                        <div className="right">{item.away_team}</div>
+                                        <div className="right">{item.awayTeam}</div>
                                     </div>
                                 </div>
                                 ))}

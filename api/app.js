@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/standing');
 var pronoRouter = require("./routes/prono");
 var matchRouter = require('./routes/match');
+var matchAdminRouter = require('./routes/matchAdmin');
 var signupRouter = require('./routes/signup');
 var loginRouter = require('./routes/login');
 
@@ -43,6 +44,7 @@ app.use('/', indexRouter);
 app.use('/standing', usersRouter);
 app.use("/prono", pronoRouter);
 app.use('/match', matchRouter);
+app.use('/matchAdmin', matchAdminRouter);
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
 

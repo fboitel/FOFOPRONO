@@ -16,11 +16,11 @@
   letter-spacing: -2px;
 }
 
-.Match div.date{
+.Match div.date33{
   font-size: 12px;
   font-weight: normal;
   letter-spacing: -1px;
-  width: 80px;
+  width: 150px;
 }
 
 .Match div {
@@ -125,4 +125,41 @@
   .header-right {
     float: none;
   }
+}
+
+.AnisubmitButton {
+  margin-left: 0%;
+  overflow: inherit;
+  position: relative;
+  font-family: IBMPlexSans,sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  line-height: 32px;
+  color: #fff;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background: #282c34;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: unset;
+  max-width: 392px;
+  /* min-width: 155px; */
+  padding: 5px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 30px;
+  width: 90px;
+}
+
+.AnisubmitButton:hover {
+  background: #585f6d;
+}
+
+.date-no-date{
+  margin-left: 20px;
+  font-size: 12px;
 }

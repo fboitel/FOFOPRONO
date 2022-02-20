@@ -31,6 +31,7 @@ function Header(props) {
                 <a href="/Prono">PRONOSTIQUES</a>
                 <a href="/Standing">CLASSEMENT</a>
                 <div className="header-right">
+                    <a href="/Rules">Règles</a>
                     <a href="/" onClick={signout}>Déconnexion</a>
                 </div>
             </div> 

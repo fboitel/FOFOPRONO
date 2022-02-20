@@ -1,29 +1,29 @@
 
 function getFullMonth(a){
   switch(a){
-    case 1:
+    case 0:
       return "janvier";
-    case 2:
+    case 1:
       return "fevrier";
-    case 3:
+    case 2:
         return "mars";
-    case 4:
+    case 3:
       return "avril";
-    case 5:
+    case 4:
       return "mai";
-    case 6:
+    case 5:
         return "juin";
-    case 7:
+    case 6:
       return "juillet";
-    case 8:
+    case 7:
       return "aout";
-    case 9:
+    case 8:
         return "septembre";
-    case 10:
+    case 9:
       return "octobre";
-    case 11:
+    case 10:
       return "novembre";
-    case 12:
+    case 11:
         return "décembre";
     default:
       return "err";
@@ -47,4 +47,43 @@ function isPassed(date){
     return "";
 }
 
-export {getFullMonth, normalizeValue, isPassed };
+function normalizeDay(d){
+  switch(d){
+    case 0:
+      return "lun";
+    case 1:
+      return "mar";
+    case 2:
+      return "mer";
+    case 3: 
+      return "jeu";
+    case 4:
+      return "ven";
+    case 5:
+      return "sam";
+    case 6:
+      return "dim";
+    default:
+      return "err";
+  }
+}
+
+function normalizeType(t){
+  switch(t){
+    case "final":
+      return "Finale";
+    case "semi-finals":
+      return "Demi-finale";
+    case "quarter-finals":
+      return "Quart de finale";
+    case "round of 16": 
+      return "Huitième de finale";
+    case "group stage":
+      return "Phase de poule";
+    default:
+      return "err";
+  }
+}
+
+
+export {getFullMonth, normalizeValue, isPassed, normalizeDay, normalizeType };
